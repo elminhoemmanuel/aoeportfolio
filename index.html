@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us"  class="no-js .box-border"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AOE | Frontend Developer</title>
+        <meta name="description" content="AOE Portfolio website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Teko&display=swap" rel="stylesheet">
+
+        <!-- unicons link -->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+        
+        <!-- font awesome css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+        <!-- tailwind  css -->
+        <link rel="stylesheet" href="assets/css/tailwind.css">
+
+        <!-- custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+    <body class="m-0 p-0 box-border xl:container xl:mx-auto xl:my-0 bg-portblack ">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--=============================================>>>>>
+        = Header section begins =
+        ===============================================>>>>-->
+        <header>
+            <!--=============================================>>>>>
+            = Navigation bar section begins =
+            ===============================================>>>>-->
+            <nav class="bg-portblack relative text-sm">
+
+                <!--=============================================>>>>>
+                = Navigation bar on mobile section begins =
+                ===============================================>>>>-->
+                <div id="small-nav" class=" fixed z-20 bg-portblack nav-sm flex md:hidden items-center justify-between px-4 pb-3 w-screen h-auto">
+                    
+                    <div>
+                        <a class="block" href="#"><img class="h-20" src="assets/images/aoe-logo.png" alt="AOE Logo" srcset=""></a>
+
+                    </div>
+
+                    <div>
+                        <button id="ham"  type="button" onclick="openNav()" role="button" class="block text-white  focus:text-portred  focus:outline-none hover:text-portred sec">
+                            <i class="fa-2x fas fa-bars"></i>
+                        </button>
+
+                    </div>
+                    
+                </div>
+                
+                <!-- navbox on mobile -->
+                <div id="navbox" class="md:hidden z-30 overflow-x-hidden navbox  flex-col font-semibold bg-apexxnavbg text-white fixed left-0 top-0 h-screen w-0 .text-6xl">
+                    
+                    <button type="button" onclick="openNav()" role="button" class="absolute close-icon text-white focus:text-portred focus:outline-none hover:text-portred sec">
+                            <i class="fa-2x fas fa-times"></i>
+                    </button>
+                    
+                    <div class="text-center pt-16">
+                        <a href="#about" onclick="openNav()" class="block text-1xl m-8 hover:text-portred gold">
+                            About
+                        </a>
+                        <a href="#" onclick="openNav()"  class="block text-1xl m-8  hover:text-portred gold">
+                            Work
+                        </a>
+                        
+                        <a onclick="openNav()" href="#" class="block text-1xl m-8  hover:text-portred gold">
+                            Contact
+                        </a>
+                        
+                        <a onclick="openNav()" href="#" class="text-1xl text-center block m-8 px-4 py-4 leading-none border rounded text-white border-portred hover:border-transparent hover:text-white hover:bg-portred ">
+                            Resume
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <!--= End of Navigation Bar on mobile Section =*/-->
+                <!--=============================================<<<<<-->
+
+                <!--=============================================>>>>>
+                = Navigation bar on large screens section begins =
+                ===============================================>>>>-->
+                <div id="large-nav" class="fixed  xl:container xl:mx-auto xl:my-0 z-20 bg-portblack nav-lg hidden md:flex items-center justify-between px-8 lg:px-12 pb-4 w-screen h-auto">
+                    
+                    <div>
+                        <a class="block" href="#"><img class="h-16 lg:h-24 " src="assets/images/aoe-logo.png" alt="AOE logo" srcset=""></a>
+
+                    </div>
+
+                    <!-- right side -->
+                    <div class="flex flex-shrink-0 items-center text-white  font-semibold">
+                       
+                        <a href="#about" class="block mx-2 lg:mx-3  hover:text-portred gold">
+                            About
+                        </a>
+                        <a href="#" class="block mx-2 lg:mx-3  hover:text-portred gold">
+                            Work
+                        </a>
+                        
+                        <a  href="#" class="block mx-2 lg:mx-3  hover:text-portred gold">
+                            Contact
+                        </a>
+                        <a href="#" class="text-1xl text-center block w-2/4 mx-2 lg:mx-3 py-3 px-6 leading-none border rounded border-portred hover:border-transparent hover:text-white hover:bg-portred ">
+                            Resume
+                        </a>
+                        
+
+                    </div>
+
+                    <!--= End of Navigation Bar on large screens Section =*/-->
+                    <!--=============================================<<<<<-->
+                    
+                </div>
+
+            </nav>
+            <!--= End of Navigation Bar Section =*/-->
+            <!--=============================================<<<<<-->
+
+        </header>
+        <!--= End of entire Header Section =*/-->
+        <!--=============================================<<<<<-->
+
+        
+        <!-- Font awesome script -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+
+        <!-- javascript file -->
+        <script src="assets/js/index.js" async defer></script>
+    </body>
+</html>

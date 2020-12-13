@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'gilroylight';
+    src: url('../gilroy-font/gilroy-light-webfont.woff') format('woff2'),
+         url('../gilroy-font/gilroy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+    font-family:"gilroylight",sans-serif;
+}
+.close-icon{top:4%!important;right:10%!important}.navbox{transition:.6s} 
+.port-redbg{
+    background-color: linear-gradient(#FE2D2D,#ED2F1C);
+}
