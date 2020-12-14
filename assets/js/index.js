@@ -29,8 +29,8 @@ function showDropLg(){
 
 // listen for scroll and add box shadow to nav
 window.addEventListener('scroll', function() {
-  document.getElementById('large-nav').classList.add("shadow-lg");
-  document.getElementById('small-nav').classList.add("shadow-lg");
+  document.getElementById('large-nav').classList.add("shadow-2xl");
+  document.getElementById('small-nav').classList.add("shadow-2xl");
 });
 
 
