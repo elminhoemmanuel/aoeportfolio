@@ -33,5 +33,34 @@ window.addEventListener('scroll', function() {
   document.getElementById('small-nav').classList.add("shadow-2xl");
 });
 
+// to show project detail whennhovered
+function showDetails(projectDetails){
+    document.getElementById(projectDetails).classList.remove("hidden");
+    document.getElementById(projectDetails).classList.add("flex");
+}
+
+function hideDetails(projectDetails){
+    document.getElementById(projectDetails).classList.remove("flex");
+    document.getElementById(projectDetails).classList.add("hidden");
+}
+
+//to show more projects when clicked
+function showProjects(){
+    const secondRow = document.getElementById("second-row");
+    const buttonTextMore = document.getElementById("more");
+    const buttonTextLess = document.getElementById("less");
+    if(secondRow.classList.contains("hidden")){
+        secondRow.classList.remove("hidden");
+        secondRow.classList.add("grid");
+        buttonTextMore.classList.add("hidden");
+        buttonTextLess.classList.remove("hidden");
+    }else{
+        secondRow.classList.remove("grid");
+        secondRow.classList.add("hidden");
+        buttonTextMore.classList.remove("hidden");
+        buttonTextLess.classList.add("hidden");
+    }
+}
+
 
 

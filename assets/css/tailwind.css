@@ -652,6 +652,10 @@ video {
   background-repeat: no-repeat;
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
 .border-portred {
   --border-opacity: 1;
   border-color: #EB231A;
@@ -660,6 +664,10 @@ video {
 
 .hover\:border-transparent:hover {
   border-color: transparent;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .border {
@@ -754,6 +762,10 @@ video {
   height: auto;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -791,6 +803,10 @@ video {
   margin-right: 0.5rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -815,12 +831,12 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mb-8 {
@@ -881,6 +897,11 @@ video {
   padding-right: 2rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -889,11 +910,6 @@ video {
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-40 {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
 }
 
 .pb-3 {
@@ -912,8 +928,20 @@ video {
   padding-right: 1.5rem;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .fixed {
@@ -930,6 +958,14 @@ video {
 
 .top-0 {
   top: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
 }
 
 .left-0 {
@@ -964,6 +1000,12 @@ video {
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.hover\:text-red-800:hover {
+  --text-opacity: 1;
+  color: #9b2c2c;
+  color: rgba(155, 44, 44, var(--text-opacity));
 }
 
 .hover\:text-portred:hover {
@@ -1009,6 +1051,11 @@ video {
 .gap-3 {
   grid-gap: 0.75rem;
   gap: 0.75rem;
+}
+
+.gap-5 {
+  grid-gap: 1.25rem;
+  gap: 1.25rem;
 }
 
 .gap-12 {
@@ -1242,6 +1289,10 @@ video {
     margin-right: 0.75rem;
   }
 
+  .lg\:mb-0 {
+    margin-bottom: 0;
+  }
+
   .lg\:mb-6 {
     margin-bottom: 1.5rem;
   }
@@ -1255,8 +1306,17 @@ video {
     padding-right: 5rem;
   }
 
+  .lg\:py-40 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
   .lg\:pt-12 {
     padding-top: 3rem;
+  }
+
+  .lg\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 }
 
