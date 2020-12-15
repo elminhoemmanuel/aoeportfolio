@@ -984,10 +984,6 @@ video {
   padding-top: 4rem;
 }
 
-.pr-16 {
-  padding-right: 4rem;
-}
-
 .pt-24 {
   padding-top: 6rem;
 }
@@ -1294,6 +1290,10 @@ video {
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .md\:pr-16 {
+    padding-right: 4rem;
   }
 
   .md\:w-1\/2 {
