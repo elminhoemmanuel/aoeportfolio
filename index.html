@@ -80,7 +80,7 @@
                             Work
                         </a>
                         
-                        <a onclick="openNav()" href="#" class="block text-1xl m-8  hover:text-portred gold">
+                        <a onclick="openNav()" href="#contact" class="block text-1xl m-8  hover:text-portred gold">
                             Contact
                         </a>
                         
@@ -114,7 +114,7 @@
                             Work
                         </a>
                         
-                        <a  href="#" class="block mx-2 lg:mx-3  hover:text-portred gold">
+                        <a  href="#contact" class="block mx-2 lg:mx-3  hover:text-portred gold">
                             Contact
                         </a>
                         <a href="https://drive.google.com/file/d/1oQPydikQ98w2kC9yJoLDcVp0swyu23Af/view?usp=sharing" class="text-1xl text-center block w-2/4 mx-2 lg:mx-3 py-3 px-6 leading-none border border-portred hover:border-transparent hover:text-white hover:bg-portred ">
@@ -149,7 +149,7 @@
                     <h1 class="text-portred font-bold text-2xl md:text-3xl lg:text-5xl code-text tracking-widest">FOR THE WEB. </h1>
                     <p class="text-white mb-4">I'm a Frontend Developer who builds creative <br>and efficient web applications.</p>
                     <div class="mt-2">
-                        <a href="mailto:amodue15@gmail.com" class="inline-block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3">Hire Me</a>
+                        <a href="mailto:amodue15@gmail.com" class="inline-block py-2 px-4 md:px-8 bg-portred text-white hover:bg-red-800 mr-3 mb-2">Hire Me</a>
                         <a href="mailto:amodue15@gmail.com" class="inline-block py-2 px-4 md:px-8 bg-transparent border border-portred text-white hover:border-none hover:bg-portred">Get&nbsp;in&nbsp;touch</a>
 
                     </div>
@@ -182,7 +182,7 @@
         <!--=About Section =*/-->
         <!--=============================================<<<<<-->
 
-        <section id="about" class="px-8 md:px-12 lg:px-20 bg-portgrey py-16 flex flex-col-reverse md:flex-row">
+        <section id="about" class="px-8 md:px-12 lg:px-20 bg-portgrey py-16 flex flex-col-reverse md:flex-row bg-clip-padding ">
             <div class="w-full md:w-1/2 pr-6">
                 <img class="h-8/12" src="assets/images/about-img.svg" alt="about image">
             </div>
@@ -481,7 +481,7 @@
                 </div>
 
                 <!-- Second row of most important projects -->
-                <div id="second-row" class=" grid-cols-1 md:grid-cols-3 gap-3 works-div py-10 px-4 hidden">
+                <div id="second-row" class=" grid-cols-1 md:grid-cols-3 gap-3 works-div pb-10 px-4 hidden">
                     <!-- individual projects div -->
                     <div onmouseover='showDetails("chaffeur-details")' onmouseout='hideDetails("chaffeur-details")' class="projects chaffeur-project text-center rounded  block bg-cover bg-no-repeat cursor-pointer mb-6">
                         <div id="chaffeur-details" class="px-4 w-full h-full details justify-center items-center hidden rounded">
@@ -575,20 +575,99 @@
 
                 </div>
 
-                <!-- link to choose to show more or less -->
-                <div class="flex justify-center items-center">
-                    <button onclick="showProjects()" id="more-projects" class="focus:outline-none block py-2 px-4 md:px-8 bg-transparent border border-portred text-white hover:border-none hover:bg-portred">See&nbsp;<span id="more" class="more">More</span><span id="less" class="less hidden">Less</span></button>
-                </div>
+                
 
+            </div>
+
+            <!-- link to choose to show more or less -->
+            <div class="flex justify-center items-center my-6">
+                <button onclick="showProjects()" id="more-projects" class="focus:outline-none block py-2 px-4 md:px-8 bg-transparent border border-portred text-white hover:border-none hover:bg-portred">See&nbsp;<span id="more" class="more">More</span><span id="less" class="less hidden">Less</span></button>
             </div>
         </section>
 
         <!--=End of Works Section =*/-->
         <!--=============================================<<<<<-->
 
+        <!--=Contact Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <section id="contact" class="contact py-16 px-8 md:px-12 lg:px-20 flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2 mb-12 md:mb-0 lg:py-10 pr-16">
+                <h1 class="text-2xl md:text-3xl">Let's&nbsp;Talk</h1>
+                <p class="mb-4 lg:mb-8"><svg width="78" height="3" viewBox="0 0 78 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="78" height="3" fill="url(#paint0_linear)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="0" y1="1.5" x2="78" y2="1.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FE2D2D"/>
+                    <stop offset="1" stop-color="#ED2F1C"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                </p>
+                <div id="alertbox" class="confirm-message rounded bg-green-700 p-4 hidden">
+                    <p>Hey👋,I got your message.Will revert soonest.</p>
+                </div>
+                <form action="" class="contact-form mt-12" id="contact-form">
+                    
+                    <div class="mb-6">
+                        <input required type="text" id="name" name="name" placeholder="Name" class="text-white block w-full bg-transparent border border-portred border-t-0 
+                        border-l-0 border-r-0 focus:bg-transparent focus:outline-none placeholder-white py-2 ">
+                    </div>
+                    <div class="mb-6">
+                        <input required type="text" id="email" name="email" placeholder="Email" class="text-white block w-full bg-transparent border border-portred border-t-0 
+                        border-l-0 border-r-0 focus:bg-transparent focus:outline-none placeholder-white py-2 ">
+                    </div>
+                    <div class="mb-6">
+                        <textarea required type="text" rows="2" id="message" name="message" placeholder="Message" class="text-white block w-full bg-transparent border border-portred border-t-0 
+                        border-l-0 border-r-0 focus:bg-transparent focus:outline-none placeholder-white py-2 "></textarea>
+                    </div>
+                    <div class="mb-2" >
+                        <input id="form-submit" type="submit" class="text-white text-center bg-portred hover:bg-red-800 focus:outline-none py-2 px-4 md:px-8">
+                    </div>
+
+                </form>
+            </div>
+            <div class="w-full md:w-1/2 pr-6">
+                <img class="h-3/4 lg:h-8/12" src="assets/images/contact.svg" alt="contact image">
+            </div>
+        </section>
+
+        <!--=End of Contact Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <!--=Footer Section =*/-->
+        <!--=============================================<<<<<-->
+
+        <footer class="bg-portgrey px-8 md:px-12 lg:px-20 py-8">
+            <div class="text-center">
+                <div class="flex flex-row justify-center items-center">
+                    <div class="mb-3 mr-3"><a href="https://twitter.com/elminhoemmanuel"><img class="h-8" src="assets/images/twitter.svg" alt="twitter icon"></a></div>
+                    <div class="mb-3 mr-3"><a href="https://www.linkedin.com/in/amodu/"><img class="h-8" src="assets/images/linkedin.svg" alt="linkedin icon"></a></div>
+                    <div class="mb-3 mr-3"><a href="https://wa.link/jn4i15"><img class="h-8" src="assets/images/whatsapp.svg" alt="whatsapp icon"></a></div>
+                    <div class="mb-3 mr-3"><a href="mailto:amodue15@gmail.com"><img class="h-8" src="assets/images/email.svg" alt="email icon"></a></div>
+                </div>
+                <div>
+                    <p class="mb-2">Designed by <a href="https://twitter.com/Aise_Idahor" class="font-bold hover:text-portred">Aise</a> and developed by Yours truly</p>
+                    <p>© Copyright 2020. All right reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <!--=End of footer Section =*/-->
+        <!--=============================================<<<<<-->
+
         
         <!-- Font awesome script -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+
+        <!-- firebase main-->
+        <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+
+        <!-- firebase realtime database-->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
 
         <!-- javascript file -->
         <script src="assets/js/index.js" async defer></script>

@@ -1,5 +1,66 @@
+//firebase initialization 
+// Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDKSAFDfTbnbcFydtPplTbXXaLylLQbNFA",
+    authDomain: "portfolio-contact-form-8a97d.firebaseapp.com",
+    projectId: "portfolio-contact-form-8a97d",
+    storageBucket: "portfolio-contact-form-8a97d.appspot.com",
+    messagingSenderId: "1008707659524",
+    appId: "1:1008707659524:web:b137b1ce0e6d4625a4d251",
+    measurementId: "G-P8H1K3VW4M"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 
-//functions
+//form submission collection
+var contactMessagesRef = firebase.database().ref("contactMessages");
+
+// code to handle form submission
+// listen for form submit
+document.getElementById("contact-form").addEventListener("submit",submitForm)
+
+function submitForm(e){
+    e.preventDefault();
+    
+    //Get form values
+    var name = getInputVal("name");
+    var email = getInputVal("email");
+    var message = getInputVal("message");
+
+    //save to firebase
+    saveMessage(name,email,message);
+
+    //show alert
+    const alertBox = document.getElementById("alertbox");
+    alertBox.classList.remove("hidden");
+    setTimeout(function(){
+        alertBox.classList.add("hidden");
+    },3000);
+
+    //reset form
+    document.getElementById("contact-form").reset();
+}
+
+//function to get form value
+function getInputVal(id){
+    return document.getElementById(id).value;
+}
+
+//function to save the message to firebase
+function saveMessage(name,email,message){
+    var newContactMessagesRef =  contactMessagesRef.push();
+    newContactMessagesRef.set({
+        name:name,
+        email:email,
+        message:message
+    })
+}
+
+
+
+//functions for other parts of website
 //handle opening and closing of nav on mobile
 function openNav() {
     document.getElementById("navbox").classList.toggle("w-screen");
@@ -61,6 +122,4 @@ function showProjects(){
         buttonTextLess.classList.add("hidden");
     }
 }
-
-
 

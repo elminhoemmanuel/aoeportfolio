@@ -614,8 +614,18 @@ video {
   }
 }
 
+.bg-clip-padding {
+  background-clip: padding-box;
+}
+
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-green-700 {
+  --bg-opacity: 1;
+  background-color: #2f855a;
+  background-color: rgba(47, 133, 90, var(--bg-opacity));
 }
 
 .bg-portblack {
@@ -648,6 +658,10 @@ video {
   background-color: rgba(235, 35, 26, var(--bg-opacity));
 }
 
+.focus\:bg-transparent:focus {
+  background-color: transparent;
+}
+
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
@@ -672,6 +686,18 @@ video {
 
 .border {
   border-width: 1px;
+}
+
+.border-t-0 {
+  border-top-width: 0;
+}
+
+.border-r-0 {
+  border-right-width: 0;
+}
+
+.border-l-0 {
+  border-left-width: 0;
 }
 
 .box-border {
@@ -803,6 +829,11 @@ video {
   margin-right: 0.5rem;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -847,6 +878,10 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -861,6 +896,10 @@ video {
 
 .p-0 {
   padding: 0;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-6 {
@@ -890,6 +929,11 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .px-8 {
@@ -940,8 +984,30 @@ video {
   padding-top: 4rem;
 }
 
+.pr-16 {
+  padding-right: 4rem;
+}
+
 .pt-24 {
   padding-top: 6rem;
+}
+
+.placeholder-white::-moz-placeholder {
+  --placeholder-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--placeholder-opacity));
+}
+
+.placeholder-white:-ms-input-placeholder {
+  --placeholder-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--placeholder-opacity));
+}
+
+.placeholder-white::placeholder {
+  --placeholder-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--placeholder-opacity));
 }
 
 .fixed {
@@ -1299,6 +1365,11 @@ video {
 
   .lg\:mb-8 {
     margin-bottom: 2rem;
+  }
+
+  .lg\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .lg\:px-20 {
