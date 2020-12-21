@@ -55,9 +55,44 @@ function saveMessage(name,email,message){
         name:name,
         email:email,
         message:message
-    })
+    }).then(() => { sendEmail() })
 }
 
+//function to send message to email after form submission
+function sendEmail(){
+    console.log("great");
+    let settings = {
+        host:'smtp.gmail.com',
+        username:'aoewebsite4u@gmail.com',
+        password:'aguythatbuildssoftware',
+        secure: false,
+        port: 587,
+        from: 'AOE website'
+    }
+    
+    let data = {
+        senderFullname: 'AOE Website',
+        senderEmail:'aoewebsite4u@gmail.com',
+        email: 'aoewebsite4u@gmail.com',
+        subject: 'Message from AOE website',
+        body: 'Hi you have a message, open firebase to view'
+      }
+    
+    let values = {...settings, ...data}
+    
+    url = 'https://nodemailer-webapp.herokuapp.com/sendcontactmail'
+
+    var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            }
+    };
+
+    xhttp.open("POST", url, true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(values));
+}
 
 
 //functions for other parts of website
