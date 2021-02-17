@@ -960,6 +960,10 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.pt-4 {
+  padding-top: 1rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -982,10 +986,6 @@ video {
 
 .pt-16 {
   padding-top: 4rem;
-}
-
-.pt-24 {
-  padding-top: 6rem;
 }
 
 .placeholder-white::-moz-placeholder {
@@ -1032,10 +1032,6 @@ video {
 
 .left-0 {
   left: 0;
-}
-
-.shadow {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .shadow-2xl {
@@ -1270,6 +1266,10 @@ video {
     flex-direction: row;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:text-base {
     font-size: 1rem;
   }
@@ -1294,6 +1294,10 @@ video {
 
   .md\:pr-16 {
     padding-right: 4rem;
+  }
+
+  .md\:pt-24 {
+    padding-top: 6rem;
   }
 
   .md\:w-1\/2 {
